@@ -47,3 +47,5 @@ venv/
 ENV/
 data/
 *.csv
+
+/notebook

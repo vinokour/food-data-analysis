@@ -1,5 +1,0 @@
-Website: https://vinokour.github.io/food-data-analysis/
-
-To run:
-bundle install
-bundle exec jekyll serve
