@@ -4,7 +4,7 @@
 
 **Emails**: jadels@umich.edu and Vinokour@umich.edu
 
-## Introduction
+## Introduction test
 Can we predict a recipe's rating before it's even cooked? This analysis explores a dataset of over 83,000 recipes from food.com to understand what makes a recipe successful. By analyzing ingredients, preparation methods, and cooking times, we aim to help home cooks and food content creators optimize their recipes for better ratings.
 
 ### Dataset Overview
