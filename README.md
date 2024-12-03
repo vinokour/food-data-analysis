@@ -1,6 +1,6 @@
 # Recipe Success: Predicting Food Rating Through Ingredients and Instructions
 
-**Authors**: Joey Adelman and Nick Vinokour
+**Authors**: Joseph Adelman and Nick Vinokour
 
 **Emails**: jadels@umich.edu and Vinokour@umich.edu
 
