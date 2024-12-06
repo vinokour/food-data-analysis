@@ -200,7 +200,7 @@ Our sklearn Pipeline included:
 While the improvements are modest, they suggest our engineered features capture meaningful aspects of recipe quality. The similar MAE but improved R² indicates our model makes more consistent predictions across different types of recipes.
 
 ## Conclusion
-The relatively low R² scores for both models suggest that recipe ratings are inherently difficult to predict from recipe characteristics alone, likely due to the subjective nature of cooking and taste preferences. Future improvements could focus on:
+The relatively low R² scores for both models suggest that recipe ratings are difficult to predict from recipe characteristics alone, likely due to the subjective nature of cooking and taste preferences. Future improvements could focus on:
 
 1. **Feature Engineering**:
    - Create ingredient category features
