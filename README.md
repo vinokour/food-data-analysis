@@ -5,7 +5,7 @@
 **Emails**: jadels@umich.edu and Vinokour@umich.edu
 
 ## Introduction
-Can we predict a recipe's rating before it's even cooked? This analysis explores a dataset of over 83,000 recipes from food.com to understand what makes a recipe successful. By analyzing ingredients, preparation methods, and cooking times, we aim to help home cooks and food content creators optimize their recipes for better ratings.
+Can we predict a recipe's rating before it's even cooked? This analysis explores a dataset of over 83,000 recipes from food.com to understand what makes a recipe successful. By analyzing ingredients, preparation methods, and cooking times, we can help home cooks and food content creators optimize their recipes for better ratings.
 
 ### Dataset Overview
 Our dataset contains 83,782 recipes with detailed information about ingredients, preparation steps, cooking time, and user ratings. Key columns include:
@@ -17,20 +17,6 @@ Our dataset contains 83,782 recipes with detailed information about ingredients,
 | n_ingredients | Number of ingredients used | 7 |
 | minutes | Total preparation time | 45 |
 | average_rating | User rating (1-5 stars) | 4.5 |
-
-#### Why This Matters
-Recipe ratings significantly impact:
-- Content creators' success on food platforms
-- Home cooks' recipe selection
-- Food bloggers' content strategy
-- Recipe website recommendations
-
-Understanding what drives recipe ratings can help:
-1. Recipe developers optimize their content
-2. Cooking platforms improve recommendation systems
-3. Home cooks make better recipe choices
-
-Our analysis focuses on predicting recipe ratings using only information available before publication, helping content creators craft more successful recipes from the start.
 
 ## Data Cleaning and EDA
 
@@ -59,17 +45,17 @@ The cleaned dataset contains 83,782 recipes with complete information about ingr
 #### Rating Distribution
 ![Rating Distribution](assets/rating_dist.png)
 
-Most recipes are rated between 4-5 stars, showing a strong positive skew in ratings. This suggests either a selection bias (poorly rated recipes being removed) or a general tendency for users to give positive ratings.
+Most recipes are rated between 4-5 stars, showing a strong positive skew in ratings. This suggests that there is a general tendency for users to give positive ratings.
 
 #### Preparation Time Analysis
 ![Time vs Rating](assets/time_rating1.png)
 
-Recipe preparation times follow a right-skewed distribution with a median of 30 minutes. There's a long tail of recipes taking several hours, typically for complex dishes or slow-cooking methods.
+Recipe preparation times follow a right-skewed distribution with a median of 30 minutes. There's a long tail of recipes taking several hours, typically for complex dishes.
 
 ### Bivariate Analysis
 
 #### Time vs Rating Relationship
-The correlation between preparation time and ratings is weak (correlation = 0.03), suggesting that recipe quality isn't strongly tied to cooking duration.
+The correlation between preparation time and ratings is weak (correlation = 0.03), suggesting that recipe quality isn't strongly tied to cooking duration. This is probably why the R² score of our baseline and final model are relatively low.
 
 #### Rating by Recipe Type
 
@@ -163,7 +149,6 @@ This feature captures how well-organized a recipe's steps are. The rationale beh
 #### Algorithm: Ridge Regression
 We chose Ridge Regression for several domain-specific reasons:
 - Recipe ratings likely have a linear relationship with ingredient presence/absence
-- L2 regularization helps handle the large number of TF-IDF features
 - The model remains interpretable, important for understanding ingredient impacts
 - More stable than plain linear regression when dealing with many features
 
@@ -197,10 +182,10 @@ Our sklearn Pipeline included:
 - MAE: 0.4548 (similar)
 - R² Score: 0.0147 (14% improvement)
 
-While the improvements are modest, they suggest our engineered features capture meaningful aspects of recipe quality. The similar MAE but improved R² indicates our model makes more consistent predictions across different types of recipes.
+While the improvements are very low, they suggest our engineered features capture meaningful aspects of recipe quality. The similar MAE but improved R² indicates our model makes more consistent predictions across different types of recipes, even if it is low.
 
 ## Conclusion
-The relatively low R² scores for both models suggest that recipe ratings are difficult to predict from recipe characteristics alone, likely due to the subjective nature of cooking and taste preferences. Future improvements could focus on:
+The  low R² scores for both models suggest that recipe ratings are difficult to predict from recipe characteristics alone, likely due to the subjective nature of cooking and taste preferences. Future improvements could focus on:
 
 1. **Feature Engineering**:
    - Create ingredient category features
