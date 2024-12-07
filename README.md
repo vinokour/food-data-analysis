@@ -1,4 +1,4 @@
-# Recipe Success: Predicting Food Rating Through Ingredients and Instructions
+# Recipe Success: Can You Predict Recipe Ratings Before You Cook?
 
 **Authors**: Joseph Adelman and Nick Vinokour
 
